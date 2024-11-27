@@ -1,4 +1,8 @@
 ## Hi there 👋
+This is my final project for a website development course.
+My website is based off of a recipe blog and includes delicious pictures of food.
+The backend has html, css, and javascript.
+The pages also include responsive resizing for smaller screens.
 
 <!--
 **Tabby-Tabby/Tabby-Tabby** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
