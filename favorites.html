@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabby's Recipe Blog | Submissions</title>
+    <!--add style sheet and js script-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="scripts.js"></script>  
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+            <a href="index.html"><i class="material-symbols-outlined">home</i></a>
+            <a href="about.html">About</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="categories.html">Categories</a>
+        </nav>
+        </header>
+        <h1 class="pacifico-regular">Favorite Recipes</h1>
+
+        <form class="catsections" id="recipeForm">
+            <h2 class="itim-regular">Submit your Favorite Recipe</h2>
+            <div>
+
+                <div class="form">
+                    <label for="nickname">Name/Nickname:</label>
+                    <input type="text" id="nickname" name="nickname" required><br>
+                </div>
+
+                <div class="form">
+                    <label for="recipeName">Name of Recipe:</label>
+                    <input type="text" id="recipeName" required><br>
+                </div>
+
+                <div class="form">
+                    <label for="recipeLink">Link to Recipe:</label>
+                    <input type="url" id="recipeLink" required><br>
+                </div>
+
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+        
+                
+            </div>
+        </form>
+
+        <div id="recipeDisplay">
+        </div>
+
+        <script>
+  const recipeForm = document.getElementById("recipeForm");
+  const recipeDisplay = document.getElementById("recipeDisplay");
+
+  recipeForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const nickname = document.getElementById("nickname").value;
+    const recipeName = document.getElementById("recipeName").value;
+    const recipeLink = document.getElementById("recipeLink").value;
+
+    // Create a new element to display the form data
+    const recipeItem = document.createElement("div");
+    recipeItem.classList.add("recipe-item");
+    recipeItem.innerHTML = `<div class="catsections">
+      <p>Name/Nickname: ${nickname}</p>
+      <p>Name of Recipe: ${recipeName}</p>
+      <p>Link to Recipe: <a href="${recipeLink}" target="_blank">${recipeLink}</a></p>
+      <div>
+    `;
+
+    // Append the new element to the recipe display container
+    recipeDisplay.appendChild(recipeItem);
+
+    // Clear the form fields
+    document.getElementById("nickname").value = "";
+    document.getElementById("recipeName").value = "";
+    document.getElementById("recipeLink").value = "";
+  });
+</script>
+
+        
+    </main>
+    <footer class="diffooter">
+        <div>
+            <hr>
+            <p>Author: Tabitha Rosier</p>
+            <address>Email: <a href="mailto:97trosie@gmail.com">97trosie@gmail.com</a></address>
+            <p>Disclaimer: Any photos featured on this site are from the creators of Unsplashed.com</p>
+            <p>Test Link: https://sallysbakingaddiction.com/easy-homemade-strawberry-shortcake/ </p>
+        </div>
+    </footer>
+    
+</body>
+</html>

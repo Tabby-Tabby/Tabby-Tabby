@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Sofia&display=swap');
+.itim-regular {
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/*Main style for all pages*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+@font-face{
+    font-family: pacifico-regular;
+    src: url(fonts/Pacifico-Regular.ttf);
+}
+
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+  }
+  
+
+body{
+    background-image: linear-gradient(to right,#d7f4e3, #d1d5e8, #d7f4e3);
+    font-family: 'pacifico-regular';
+}
+
+
+main h1{
+    text-align: center;
+}
+
+h1{
+    font-family: 'pacifico-regular';
+}
+
+nav :not(:first-child) {
+    float: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 5px;
+    margin: 5px;
+    font-size: 1.5rem;
+
+}
+
+nav a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+  }
+
+  /*Recipe page style*/
+  .search-bar {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    width: 200px;
+  }
+  
+  .search-bar input[type="text"] {
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+  
+  .search-bar button {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+
+  /*Index page style*/
+  .ndx-glass{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 60%;
+  }
+
+  .center {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .featuredImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  /*Category page style*/
+
+  .catsections{ 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 50%;
+    background-color: whitesmoke;
+  }
+
+
+  /*images*/
+  .carousel {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  .carousel img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .prev, .next{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .prev{
+    left: 0;
+  }
+
+  .next{
+    right: 0;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .prev:hover, .next:hover{
+    background-color: #f1f1f1;
+    color: black;
+  }
+
+  /*Favorite page style*/
+
+  .form{
+    margin-bottom: 20px;
+  }
+
+  .recipe-item {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-item a {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .recipe-item a:hover {
+    text-decoration: underline;
+  }
+
+  /*About Page Style*/
+  /*style sign up form*/
+  .sign-up{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 50%;
+  }
+
+  /* Universal footer style*/
+  footer{
+    width: 100%;
+    padding: 20px;
+    position: relative;
+  }
+
+  /*style buttons*/
+  .categories button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: 'pacifico-regular';
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .categories:hover{
+    background-color: lightblue;
+  }
+
+  /*Responsive design*/
